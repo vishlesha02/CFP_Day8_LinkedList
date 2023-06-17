@@ -26,15 +26,32 @@ namespace LinkedList
             }
         }
 
+        public void AddLast(T data) 
+        {
+            Node<T> newNode = new Node<T>(data);
+
+            if (head == null)
+            {
+                head = newNode;
+                tail = newNode;
+            
+            }
+            else 
+            {
+                tail.next = newNode;
+                tail = newNode;
+            }
+        }
+
         public void Display()
         { 
             Node<T> temp= head;
             while (temp != null) 
             {       
-                Console.WriteLine(temp.data + "->");
+                Console.Write(temp.data + "->");
                 temp = temp.next;
             }
-            
+            Console.WriteLine();
         }
     }
 }
