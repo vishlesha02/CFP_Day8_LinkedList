@@ -75,6 +75,34 @@ namespace LinkedList
                 head = head.next;
             }
         }
+
+        public void DeleteLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The List is Empty");
+                return;
+            }
+
+            if (head == tail)
+            {
+                Console.WriteLine(head.data + " The Last element is Deleted successfully");
+                head = null;
+                tail = null;
+                return;
+            }
+
+            Node<T> temp = head;
+            while (temp.next != tail)
+            {
+                temp = temp.next;
+            }
+
+            Console.WriteLine(tail.data + " The Last element is Deleted successfully");
+            temp.next = null;
+            tail = temp;
+        }
+
         public void Display()
         { 
             Node<T> temp= head;

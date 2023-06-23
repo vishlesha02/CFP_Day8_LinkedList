@@ -28,6 +28,10 @@
             l1.DeleteFirst();
             l1.Display();
 
+            //Deletes the very Last Element
+            l1.DeleteLast();
+            l1.Display();
+
         }
     }
 
