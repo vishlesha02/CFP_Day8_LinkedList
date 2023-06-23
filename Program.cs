@@ -23,6 +23,11 @@
             l1.AddAfter(9,6);
             l1.Display();
 
+
+            //Deletes the very first element from the list
+            l1.DeleteFirst();
+            l1.Display();
+
         }
     }
 

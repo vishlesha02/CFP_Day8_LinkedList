@@ -63,6 +63,18 @@ namespace LinkedList
             return false;
         }
 
+        public void DeleteFirst()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The List is Empty");
+            }
+            else
+            {
+                Console.WriteLine(head.data + "-> First element is deleted successfully");
+                head = head.next;
+            }
+        }
         public void Display()
         { 
             Node<T> temp= head;
