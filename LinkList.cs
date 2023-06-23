@@ -26,6 +26,8 @@ namespace LinkedList
             }
         }
 
+
+
         public void AddLast(T data)
         {
             Node<T> newNode = new Node<T>(data);
@@ -42,6 +44,8 @@ namespace LinkedList
                 tail = newNode;
             }
         }
+
+
 
         public bool AddAfter(T searchData, T addData)
         {
@@ -63,6 +67,8 @@ namespace LinkedList
             return false;
         }
 
+
+
         public void DeleteFirst()
         {
             if (head == null)
@@ -75,6 +81,8 @@ namespace LinkedList
                 head = head.next;
             }
         }
+
+
 
         public void DeleteLast()
         {
@@ -102,6 +110,41 @@ namespace LinkedList
             temp.next = null;
             tail = temp;
         }
+
+
+
+        public bool Delete(T data)
+        {
+            Node<T> searchedNode = null;
+            Node<T> temp = head;
+
+            while (temp != null)
+            {
+                if (temp.data.Equals(data))
+                {
+                    if (searchedNode == null)
+                    {
+                        head = temp.next;
+                    }
+                    else
+                    {
+
+                        searchedNode.next = temp.next;
+                    }
+
+                    temp.next = null; 
+                    return true;
+                }
+
+                searchedNode = temp;
+                temp = temp.next;
+            }
+
+            Console.WriteLine($"{data} does not exist in the Linked List");
+            return false;
+        }
+
+
 
         public void Display()
         { 

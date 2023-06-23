@@ -32,6 +32,10 @@
             l1.DeleteLast();
             l1.Display();
 
+            //Deletes the Element you choose
+            l1.Delete(1);
+            l1.Display();
+
         }
     }
 
